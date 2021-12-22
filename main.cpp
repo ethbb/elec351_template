@@ -10,6 +10,7 @@
 #include "azure_c_shared_utility/xlogging.h"
 #include <cstring>
 #include <string.h>
+#include "SD_Card.hpp"
 using namespace uop_msb;
 
 extern void azureDemo();
@@ -56,6 +57,9 @@ int main() {
     //UOP_MSB_TEST  board;  //This class is purely for testing. Do no use it otherwise!!!!!!!!!!!
     //board.test();         //Look inside here to see how this works
     // END
+
+    sdCard myObj;
+    myObj.test();
 
     if (!connect()) return -1;
 
